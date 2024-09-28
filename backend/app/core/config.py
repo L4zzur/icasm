@@ -1,5 +1,5 @@
+from pydantic import BaseModel, FilePath
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import FilePath, BaseModel
 
 
 class UvicornConfig(BaseModel):
