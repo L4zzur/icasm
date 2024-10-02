@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .base import Base
-from .mixins import IdMixin
+from .mixins import CreatedAtMixin, IdMixin
 
 
-class User(Base, IdMixin):
+class User(Base, IdMixin, CreatedAtMixin):
     tg_id: Mapped[int] = mapped_column(
         nullable=False,
         unique=True,
